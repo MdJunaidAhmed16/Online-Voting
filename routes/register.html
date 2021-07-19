@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="title">
+      Register Here
+    </div>
+    <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+      <div class="form">
+        <div class="input_field">
+          <input type="text" name="mobile" placeholder="Mobile Number" class="input">
+          <i class="fas fa-user"></i>
+        </div>
+
+        <div class="input_field">
+          <input type="password" placeholder="Password" name="pass" class="input">
+          <i class="fas fa-lock"></i>
+        </div>
+        <!-- <div class="input_field">
+          <input type="password" placeholder="Confirm Password" name="cpass" class="input">
+          <i class="fas fa-lock"></i>
+        </div> -->
+        <div class="input_field">
+          <input type="text" name="address" placeholder="Address" class="input">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="input_field">
+          <input type="file" placeholder="Choose File" name="photo" class="input">
+          <i class="fas fa-image"></i>
+        </div>
+        <div class="box">
+          <select name="role" id="role">
+            <option value="1">Voter</option>
+            <option value="2">Candidate</option>
+          </select>
+        </div>
+        <div class="btn">
+          Register
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

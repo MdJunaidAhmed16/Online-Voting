@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Online Voting</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<h1 style="color:#38d39f;font-size: 40px;text-align: center;">Cast Your Vote Your ☝</h1>
+
+	<div class="container">
+		<div class="img">
+			<img src="images/elect.png">
+		</div>
+		<div class="login-content">
+			<form action="routes/dashboard.php" method="POST">
+				<img src="images/avatar.svg">
+				<h2 class="title">Welcome</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" class="input">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" class="input">
+					</div>
+				</div>
+				<div class="box">
+					<select name="role" id="role">
+						<option value="1">Voter</option>
+						<option value="2">Candidate</option>
+					</select>
+				</div>
+				<a href="routes/register.html">New User?</a>
+				<input type="submit" class="btn" value="Login">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

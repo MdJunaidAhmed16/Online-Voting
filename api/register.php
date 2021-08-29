@@ -9,20 +9,25 @@
     }
 
 
-    $mobile=($_POST['mobile']);
-    $pass=($_POST['pass']);
+    $mobile=$_POST['mobile'];
+    $pass=$_POST['pass'];
     // $cpass=$_POST['cpass'];
-    $address=($_POST['address']);
-    $photo=($_FILES['photo']['mobile']);
-    $tmp_name=($_FILES['photo']['tmp_name']);
-    $role=($_POST['role']);
+    $address=$_POST['address'];
+    $name=$_FILES['file']['name'];
+    $tmp_name=$_FILES['file']['tmp_name'];
+    $role=$_POST['role'];
+    $path="../uploads/images/";
     
 
-    move_uploaded_file($tmp_name,"../uploads/$photo");
-    $insert= "INSERT INTO voting.user(`mobile`, `pass`, `address`, `photo`, `role`, `status`, `votes`) VALUES ('$mobile','$pass', '$address', '$photo', '$role', 0, 0)";
+    move_uploaded_file($tmp_name,$path.$name);
+    $insert= "INSERT INTO user(mobile,pass,address,photo,role,status,votes) VALUES ('$mobile','$pass', '$address', '$name', '$role', 0, 0)";
     if ($con->query($insert) === TRUE) 
     {
-        echo "New record created successfully";
+        echo '
+            <script>
+                window.location="../index.html";
+            </script>
+        ';
     } 
     else 
     {
